@@ -54,6 +54,9 @@ void loop() {
   } else if ( distance > 200 && distance <= 300){
     analogWrite(PIN_LED, (distance-200)/100*255);       // LED 킴
     Serial.print("LightValue:"); Serial.print((distance-200)/100*255);
+  }else {
+    analogWrite(PIN_LED, 255);       // LED 끔
+    Serial.print("LightValue:"); Serial.print(255);
   }
 
   // output the distance to the serial port
